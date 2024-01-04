@@ -6,7 +6,7 @@
 - Javascript (React & Testing)
 - [Hardhat](https://hardhat.org/) (Development Framework)
 - [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
-- [Next.js](https://nextjs.org/docs/getting-started/installation) (Frontend Framework)
+- [React.js](https://react.dev/) (Frontend Framework)
 
 ## Requirements For Initial Setup
 - Install [NodeJS](https://nodejs.org/en/)
