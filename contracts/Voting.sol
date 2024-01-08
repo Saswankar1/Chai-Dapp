@@ -49,6 +49,22 @@ contract Voting {
         return votesReceived[_candidate];
     }
 
-   
+    /// @notice Determines the winner based on votes.
+    /// @return The unique identifier of the winning candidate.
+    function getWinner() external view returns (bytes32) {
+        bytes32 winner;
+        uint256 maxVotes = 0;
+        uint256 maxIterations = 100;  // Set a maximum number of iterations
+    
+        for (bytes32 candidate; maxIterations > 0; candidate = keccak256(abi.encodePacked(candidate))) {
+            if (votesReceived[candidate] > maxVotes) {
+                maxVotes = votesReceived[candidate];
+                winner = candidate;
+            }
+            maxIterations--;
+        }
+    
+        return winner;
+    }
 
 }
