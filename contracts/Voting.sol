@@ -2,7 +2,7 @@
 // @author Saswankar Bura Gohain
 // @notice This Voting contract allows registered voters to cast votes for candidates.
 //         The owner can register voters, voters can cast votes, and the contract tracks votes for each candidate.
-//         Note: The getWinner function has an infinite loop and needs further attention.
+
 pragma solidity 0.8.19;
 
 contract Voting {
