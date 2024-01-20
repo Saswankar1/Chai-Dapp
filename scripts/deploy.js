@@ -1,20 +1,12 @@
 // const fs = require("fs")
 
 async function main() {
-    const Voting = await ethers.getContractFactory("Voting")
-    const voting = await Voting.deploy()
+    const Chai = await ethers.getContractFactory("Chai"); // fetching bytecode and ABI
+    const chai = await Chai.deploy(); // creating an instance of our smart contract
 
-    await voting.deployed()
+    await chai.deployed() // deploying smart contract
 
-    console.log("voting deployed to:", await voting.getAddress())
-
-    // const data = {
-    //     address: voting.address,
-    //     abi: JSON.parse(voting.interface.format("json")),
-    // }
-
-    //writes the ABI and address to the voting.json
-    // fs.writeFileSync("./src/voting.json", JSON.stringify(data))
+    console.log("Chai deployed to:", `${chai.address}`)
 }
 
 main()
